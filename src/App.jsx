@@ -1,10 +1,11 @@
 import React from 'react'
+import Navbar from './section/Navbar'
 
 const App = () => {
   return (
-    <div>
-      
-    </div>
+    <main className="max-w-7xl mx-auto">
+      <Navbar />
+    </main>
   )
 }
 

@@ -24,7 +24,7 @@
   --color-white-600: #afb0b6;
   --color-white-500: #62646c;
 
-  /* --background-image-terminal: url("/assets/terminal.png"); */
+  --background-image-terminal: url("/assets/terminal.png");
 }
 
 /* @layer base {
@@ -43,445 +43,184 @@ body {
   font-family: 'General Sans', sans-serif;
 }
 
-@layer utilities {
-  .c-space {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
+/* =========================================================
+   Custom Utilities
+   ========================================================= */
 
-  @media (min-width: 640px) {
-    .c-space {
-      padding-left: 2.5rem;
-      padding-right: 2.5rem;
-    }
-  }
-
-  .head-text {
-    font-size: clamp(1.875rem, 2.5vw, 2.25rem);
-    font-weight: 600;
-    color: transparent;
-    background-image: linear-gradient(
-      to right,
-      #bec1cf 60%,
-      #d5d8ea 60%,
-      #d5d8ea 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .nav-ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    position: relative;
-    z-index: 20;
-  }
-
-  @media (min-width: 640px) {
-    .nav-ul {
-      flex-direction: row;
-      gap: 1.5rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .nav-ul {
-      gap: 1.5rem;
-    }
-  }
-
-  .nav-li {
-    color: #a3a3a3;
-    font-family: 'General Sans', sans-serif;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
-  .nav-li:hover {
-    color: #fff;
-  }
-
-  @media (max-width: 640px) {
-    .nav-li:hover {
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .nav-li {
-      width: 100%;
-      border-radius: 0.375rem;
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
-    }
-  }
-
-  .nav-li_a {
-    font-size: 1.125rem;
-    transition: color 0.2s ease-in-out;
-  }
-
-  @media (min-width: 768px) {
-    .nav-li_a {
-      font-size: 1rem;
-    }
-  }
-
-  .nav-li_a:hover {
-    color: #fff;
-  }
-
-  .nav-sidebar {
-    position: absolute;
-    left: 0;
-    right: 0;
-    background: rgba(18, 18, 18, 0.8);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease-in-out;
-    overflow: hidden;
-    z-index: 20;
-    margin: 0 auto;
-    display: block;
-  }
-
-  @media (min-width: 640px) {
-    .nav-sidebar {
-      display: none;
-    }
-  }
-
-  .text-gray_gradient {
-    color: transparent;
-    background-image: linear-gradient(
-      to right,
-      #bec1cf 60%,
-      #d5d8ea 60%,
-      #d5d8ea 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    cursor: pointer;
-    padding: 0.75rem;
-    border-radius: 0.375rem;
-    background: rgba(30, 30, 36, 0.9);
-    transition: all 0.2s ease-in-out;
-    color: #fff;
-    margin: 0 auto;
-  }
-
-  .btn:active {
-    transform: scale(0.95);
-  }
-
-  .btn-ping {
-    position: absolute;
-    display: inline-flex;
-    height: 100%;
-    width: 100%;
-    border-radius: 9999px;
-    background-color: rgba(74, 222, 128, 0.75);
-    opacity: 0.75;
-    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-  }
-
-  .btn-ping_dot {
-    position: relative;
-    display: inline-flex;
-    border-radius: 9999px;
-    height: 0.75rem;
-    width: 0.75rem;
-    background-color: #22c55e;
-  }
-
-  .hero_tag {
-    text-align: center;
-    font-family: 'General Sans', sans-serif;
-    font-weight: 900;
-    line-height: 1.5;
-    font-size: clamp(1.875rem, 5vw, 3.75rem);
-  }
-
-  .grid-container {
-    width: 100%;
-    height: 100%;
-    border: 1px solid rgba(27, 27, 32, 0.9);
-    background: rgba(18, 18, 18, 0.9);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-
-  @media (min-width: 640px) {
-    .grid-container {
-      padding: 1.75rem;
-    }
-  }
-
-  .grid-headtext {
-    margin-bottom: 0.5rem;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #fff;
-    font-family: 'General Sans', sans-serif;
-  }
-
-  .grid-subtext {
-    color: #afb0b6;
-    font-size: 1rem;
-    font-family: 'General Sans', sans-serif;
-  }
-
-  .copy-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    cursor: pointer;
-  }
-
-  .arrow-btn {
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 0.75rem;
-    cursor: pointer;
-    border-radius: 9999px;
-    transition: all 0.2s ease-in-out;
-    background-image: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.1) 10%,
-      rgba(255, 255, 255, 0.000025) 50%,
-      rgba(255, 255, 255, 0.000025) 50%,
-      rgba(255, 255, 255, 0.025) 100%
-    );
-  }
-
-  .arrow-btn:active {
-    transform: scale(0.95);
-  }
-
-  .tech-logo {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 0.375rem;
-    padding: 0.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .client-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-    margin-top: 3rem;
-  }
-
-  @media (min-width: 768px) {
-    .client-container {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-
-  .client-review {
-    border-radius: 0.5rem;
-    grid-column: 1;
-    background: rgba(30, 30, 36, 0.9);
-    opacity: 0.5;
-    padding: 1.25rem;
-  }
-
-  @media (min-width: 768px) {
-    .client-review {
-      padding: 2.5rem;
-    }
-  }
-
-  .client-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1.25rem;
-    margin-top: 1.75rem;
-  }
-
-  @media (min-width: 1024px) {
-    .client-content {
-      flex-direction: row;
-      align-items: center;
-    }
-  }
-
-  .work-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-    margin-top: 3rem;
-  }
-
-  @media (min-width: 1024px) {
-    .work-container {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-  }
-
-  .work-canvas {
-    grid-column: 1;
-    border-radius: 0.5rem;
-    background: rgba(18, 18, 18, 0.9);
-    border: 1px solid rgba(27, 27, 32, 0.9);
-  }
-
-  .work-content {
-    grid-column: 2;
-    border-radius: 0.5rem;
-    background: rgba(18, 18, 18, 0.9);
-    border: 1px solid rgba(27, 27, 32, 0.9);
-  }
-
-  @media (min-width: 1024px) {
-    .work-content {
-      grid-column: span 2;
-    }
-  }
-
-  .work-content_container {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: flex-start;
-    gap: 1.25rem;
-    transition: all 0.5s ease-in-out;
-    cursor: pointer;
-    border-radius: 0.5rem;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
-  }
-
-  @media (min-width: 640px) {
-    .work-content_container {
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
-    }
-  }
-
-  .work-content_container:hover {
-    background: rgba(30, 30, 36, 0.9);
-  }
-
-  .work-content_logo {
-    border-radius: 1.5rem;
-    width: 4rem;
-    height: 4rem;
-    padding: 0.5rem;
-    background: rgba(24, 24, 32, 0.9);
-  }
-
-  .work-content_bar {
-    flex: 1;
-    width: 0.125rem;
-    margin-top: 1rem;
-    height: 100%;
-    background: rgba(30, 30, 36, 0.9);
-  }
-
-  .group:hover .work-content_bar,
-  .work-content_container:hover .work-content_bar {
-    background: rgba(59, 59, 61, 0.9);
-  }
-
-  .contact-container {
-    max-width: 36rem;
-    position: relative;
-    z-index: 10;
-    margin-top: 3rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  @media (min-width: 640px) {
-    .contact-container {
-      padding-left: 2.5rem;
-      padding-right: 2.5rem;
-    }
-  }
-
-  .field-label {
-    font-size: 1.125rem;
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  .field-input {
-    width: 100%;
-    background: rgba(30, 30, 36, 0.9);
-    padding: 0.5rem 1.25rem;
-    min-height: 3.5rem;
-    border-radius: 0.5rem;
-    font-size: 1.125rem;
-    color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
-  }
-
-  .field-input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-  }
-
-  .field-input:focus {
-    outline: none;
-  }
-
-  .field-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    background: rgba(59, 59, 61, 0.9);
-    padding: 0.5rem 1.25rem;
-    min-height: 3rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
-    font-size: 1.125rem;
-    color: #fff;
-  }
-
-  .field-btn_arrow {
-    width: 0.625rem;
-    height: 0.625rem;
-    object-fit: contain;
-    filter: invert(1) brightness(0);
-  }
-
-  .social-icon {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 9999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(30, 30, 36, 0.9);
-    border: 1px solid rgba(18, 18, 18, 0.9);
-  }
+@utility c-space {
+  @apply px-5 sm:px-10;
 }
 
-.waving-hand {
-  animation-name: wave-animation;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-  transform-origin: 70% 70%;
-  display: inline-block;
+@utility head-text {
+  @apply text-3xl font-semibold sm:text-4xl;
 }
+
+@utility nav-ul {
+  @apply relative z-20 flex flex-col items-center gap-4 sm:flex-row md:gap-6;
+}
+
+@utility nav-li {
+  @apply py-2 text-neutral-400 hover:text-white max-sm:w-full max-sm:rounded-md max-sm:px-5 max-sm:hover:bg-black-500;
+}
+
+@utility nav-li_a {
+  @apply text-lg transition-colors hover:text-white md:text-base;
+}
+
+@utility nav-sidebar {
+  @apply absolute left-0 right-0 z-20 mx-auto block overflow-hidden bg-black-200 backdrop-blur-sm transition-all duration-300 ease-in-out sm:hidden;
+}
+
+/* Gradient text */
+
+@utility text-gray-gradient {
+  background-image: linear-gradient(
+    to right,
+    #bec1cf 60%,
+    #d5d8ea 60%,
+    #d5d8ea 100%
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+/* =========================================================
+   Buttons
+   ========================================================= */
+
+@utility btn {
+  @apply mx-auto flex cursor-pointer items-center justify-center gap-4 rounded-md bg-black-300 p-3 text-white transition-all active:scale-95;
+}
+
+@utility btn-ping {
+  @apply absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75;
+}
+
+@utility btn-ping_dot {
+  @apply relative inline-flex h-3 w-3 rounded-full bg-green-500;
+}
+
+/* =========================================================
+   Hero Section
+   ========================================================= */
+
+@utility hero_tag {
+  @apply text-center text-3xl font-outfit font-black !leading-normal sm:text-4xl md:text-5xl xl:text-6xl;
+}
+
+/* =========================================================
+   About Section
+   ========================================================= */
+
+@utility grid-container {
+  @apply flex h-full w-full flex-col gap-5 rounded-lg border border-black-300 bg-black-200 p-4 sm:p-7;
+}
+
+@utility grid-headtext {
+  @apply mb-2 text-xl font-semibold text-white;
+}
+
+@utility grid-subtext {
+  @apply text-base text-[#afb0b6];
+}
+
+@utility copy-container {
+  @apply flex cursor-pointer items-center justify-center gap-2;
+}
+
+/* =========================================================
+   Projects Section
+   ========================================================= */
+
+@utility arrow-btn {
+  @apply h-10 w-10 cursor-pointer rounded-full p-3 transition-all active:scale-95;
+}
+
+@utility tech-logo {
+  @apply flex h-10 w-10 items-center justify-center rounded-md bg-neutral-100/10 p-2 backdrop-blur-lg;
+}
+
+/* =========================================================
+   Clients Section
+   ========================================================= */
+
+@utility client-container {
+  @apply mt-12 grid grid-cols-1 gap-5 md:grid-cols-2;
+}
+
+@utility client-review {
+  @apply col-span-1 rounded-lg bg-black-300/50 p-5 md:p-10;
+}
+
+@utility client-content {
+  @apply mt-7 flex flex-col items-start justify-between gap-5 lg:flex-row lg:items-center;
+}
+
+/* =========================================================
+   Work Experience Section
+   ========================================================= */
+
+@utility work-container {
+  @apply mt-12 grid grid-cols-1 gap-5 lg:grid-cols-3;
+}
+
+@utility work-canvas {
+  @apply col-span-1 rounded-lg border border-black-300 bg-black-200;
+}
+
+@utility work-content {
+  @apply col-span-2 rounded-lg border border-black-300 bg-black-200;
+}
+
+@utility work-content_container {
+  @apply grid cursor-pointer grid-cols-[auto_1fr] items-start gap-5 rounded-lg px-2.5 transition-all duration-500 ease-in-out hover:bg-black-300 sm:px-5;
+}
+
+@utility work-content_logo {
+  @apply h-16 w-16 rounded-3xl bg-black-600 p-2;
+}
+
+@utility work-content_bar {
+  @apply mt-4 h-full w-0.5 flex-1 bg-black-300 group-hover:bg-black-500 group-last:hidden;
+}
+
+/* =========================================================
+   Contact Section
+   ========================================================= */
+
+@utility contact-container {
+  @apply relative z-10 mt-12 max-w-xl px-5 sm:px-10;
+}
+
+@utility field-label {
+  @apply text-lg text-white-600;
+}
+
+@utility field-input {
+  @apply min-h-14 w-full rounded-lg bg-black-300 px-5 py-2 text-lg text-white-800 shadow-2xl shadow-black-200 placeholder:text-white-500 focus:outline-none;
+}
+
+@utility field-btn {
+  @apply flex min-h-12 items-center justify-center gap-3 rounded-lg bg-black-500 px-5 py-2 text-lg text-white shadow-2xl shadow-black-200;
+}
+
+@utility field-btn_arrow {
+  @apply h-2.5 w-2.5 object-contain brightness-0 invert;
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+@utility social-icon {
+  @apply flex h-12 w-12 items-center justify-center rounded-full border border-black-200 bg-black-300;
+}
+
+/* =========================================================
+   Custom CSS
+   ========================================================= */
+
+/* Arrow gradient */
 
 .arrow-gradient {
   background-image: linear-gradient(
@@ -493,28 +232,45 @@ body {
   );
 }
 
+/* Waving hand */
+
+.waving-hand {
+  display: inline-block;
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+}
+
 @keyframes wave-animation {
   0% {
     transform: rotate(0deg);
   }
+
   15% {
     transform: rotate(14deg);
   }
+
   30% {
     transform: rotate(-8deg);
   }
+
   40% {
     transform: rotate(14deg);
   }
+
   50% {
     transform: rotate(-4deg);
   }
+
   60% {
     transform: rotate(10deg);
   }
+
   70% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
