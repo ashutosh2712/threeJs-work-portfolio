@@ -6,29 +6,34 @@ Source: https://sketchfab.com/3d-models/my-virtual-desk-cba29f5b32a84113bbabde15
 Title: My Virtual Desk
 */
 
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF, useTexture } from "@react-three/drei";
 
 const HackerRoom = (props) => {
-  const { nodes, materials } = useGLTF('/models/my_virtual_desk.glb')
-  return (
+  const { nodes, materials } = useGLTF("/models/my_virtual_desk.glb");
 
+  const monitorTexture = useTexture("/textures/code-editor.png"); // Load the monitor texture
+
+  return (
     <group {...props} dispose={null}>
       <group position={[0, 75.567, -29.303]}>
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Cube_Mat91_1.geometry}
-          material={materials['Mat.9.1']}
+          material={materials["Mat.9.1"]}
         />
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.Cube_Mat8_1.geometry}
-          material={materials['Mat.8']}
+          material={materials["Mat.8"]}
         />
       </group>
-      <group position={[-23.152, 78.928, -43.659]} rotation={[0, -Math.PI / 2, 0]}>
+      <group
+        position={[-23.152, 78.928, -43.659]}
+        rotation={[0, -Math.PI / 2, 0]}
+      >
         <mesh
           castShadow
           receiveShadow
@@ -39,11 +44,13 @@ const HackerRoom = (props) => {
         <mesh
           castShadow
           receiveShadow
-          geometry={nodes['��cran_��cran_0'].geometry}
+          geometry={nodes["��cran_��cran_0"].geometry}
           material={materials.cran}
           position={[0, 0.65, -5.653]}
           rotation={[1.222, 0, 0]}
-        />
+        >
+          <meshMatcapMaterial map={monitorTexture} />
+        </mesh>
       </group>
       <mesh
         castShadow
@@ -57,28 +64,28 @@ const HackerRoom = (props) => {
         castShadow
         receiveShadow
         geometry={nodes.post_it__rose_1_Mat6_0.geometry}
-        material={materials['Mat.6']}
+        material={materials["Mat.6"]}
         position={[-24.62, 78.378, -134.572]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.post_it__rose_Mat3_0.geometry}
-        material={materials['Mat.3']}
+        material={materials["Mat.3"]}
         position={[-24.62, 78.378, -126.001]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.post_it_jaune_Mat2_0.geometry}
-        material={materials['Mat.2']}
+        material={materials["Mat.2"]}
         position={[-24.62, 78.378, -117.773]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.post_it_vert_Mat1_0.geometry}
-        material={materials['Mat.1']}
+        material={materials["Mat.1"]}
         position={[-24.62, 78.378, -109.163]}
       />
       <mesh
@@ -87,11 +94,13 @@ const HackerRoom = (props) => {
         geometry={nodes.Ecran_d_Ecran_d_0.geometry}
         material={materials.Ecran_d}
         position={[9.462, 77.607, -38.804]}
-      />
+      >
+        {/* <meshMatcapMaterial map={monitorTexture} /> */}
+      </mesh>
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes['tasse_��_th��_1_tasse_��_th��_0'].geometry}
+        geometry={nodes["tasse_��_th��_1_tasse_��_th��_0"].geometry}
         material={materials.tasse__th}
         position={[-12.602, 77.698, 0]}
       />
@@ -102,7 +111,9 @@ const HackerRoom = (props) => {
         material={materials.material}
         position={[-24.62, 78.378, -85.148]}
         rotation={[0, -Math.PI / 2, 0]}
-      />
+      >
+        <meshMatcapMaterial map={monitorTexture} />
+      </mesh>
       <mesh
         castShadow
         receiveShadow
@@ -122,21 +133,19 @@ const HackerRoom = (props) => {
         castShadow
         receiveShadow
         geometry={nodes.classeur_rouge_Mat5_0.geometry}
-        material={materials['Mat.5']}
+        material={materials["Mat.5"]}
         position={[-7.781, 77.698, 19.175]}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.claseur_bleu_Mat4_0.geometry}
-        material={materials['Mat.4']}
+        material={materials["Mat.4"]}
         position={[-7.781, 77.698, 26.567]}
       />
     </group>
-  )
+  );
+};
 
-}
-
-
-useGLTF.preload('/models/my_virtual_desk.glb')
-export default HackerRoom
+useGLTF.preload("/models/my_virtual_desk.glb");
+export default HackerRoom;
