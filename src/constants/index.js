@@ -21,38 +21,41 @@ export const navLinks = [
   },
 ];
 
-export const clientReviews = [
+export const achievements = [
   {
     id: 1,
-    name: "Emily Johnson",
-    position: "Marketing Director at GreenLeaf",
-    img: "assets/review1.png",
-    review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+    image: "assets/GATE.png",
+    title: "Cracked GATE 2020,2021",
+    description:
+      "The Graduate Aptitude Test in Engineering (GATE) is an entrance examination conducted in India that primarily tests the comprehensive understanding of undergraduate subjects in engineering and sciences for admission into postgraduate programs.",
   },
   {
     id: 2,
-    name: "Mark Rogers",
-    position: "Founder of TechGear Shop",
-    img: "assets/review2.png",
-    review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.",
+    image: "assets/SecretDiaryPlaylist.png",
+    title: "Full Stack Mastery:Building Projects from Scratch",
+    description:
+      "In 'Full Stack Mastery,' we'll be exploring a diverse array of projects, each designed to enhance your coding skills and deepen your understanding of the full stack development process. From captivating user interfaces to robust back-end functionalities, we'll leave no stone unturned.",
   },
   {
     id: 3,
-    name: "John Dohsas",
-    position: "Project Manager at UrbanTech ",
-    img: "assets/review3.png",
-    review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+    image: "assets/DSAPlaylist.png",
+    title: "DSA Course Playlist",
+    description:
+      "This playlist is about DSA Course. There will be a lot of lectures on mainly how to solve a DSA question from scratch. Platform will be leetcode.",
   },
   {
     id: 4,
-    name: "Ether Smith",
-    position: "CEO of BrightStar Enterprises",
-    img: "assets/review4.png",
-    review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.",
+    image: "assets/CodeReviewPlaylist.png",
+    title: "Code Review Playlist",
+    description:
+      "This playlist involves explaining code written by others, identifying the merits and demerits in the code, rewriting my own code, executing it, and possibly optimizing it",
+  },
+  {
+    id: 5,
+    image: "assets/CprogrammingPlaylist.png",
+    title: "C Programming Course",
+    description:
+      "This playlist covers the basics of programming using the C programming language. I will provide in-depth explanations about fundamental coding concepts, write code, and execute tests to explore various outputs.",
   },
 ];
 
@@ -313,5 +316,24 @@ export const workExperiences = [
       "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
     icon: "/assets/notion.svg",
     animation: "salute",
+  },
+];
+
+export const educations = [
+  {
+    id: 1,
+    college: "National Institute of Technology(NIT)",
+    location: "Hamirpur(HP), India",
+    date: "July 2021- July 2023",
+    icon: "assets/graduation.svg",
+    degree: "Masters of Technology(MTech) in Computer Science and Engineering",
+  },
+  {
+    id: 2,
+    college: "Roorkee College of Engineering(RCE)",
+    location: "Roorkee(UK), India",
+    date: "August 2016- September 2020",
+    icon: "assets/graduation.svg",
+    degree: "Bachelor of Technology(BTech) in Computer Science and Engineering",
   },
 ];
