@@ -100,6 +100,24 @@ body {
   @apply relative inline-flex h-3 w-3 rounded-full bg-green-500;
 }
 
+
+@keyframes live-blink {
+  0%,
+  100% {
+    background-color: #ef0606;
+    opacity: 1;
+  }
+
+  50% {
+    background-color: #c40505;
+    opacity: 0.65;
+  }
+}
+
+@utility animate-live {
+  animation: live-blink 1.2s ease-in-out infinite;
+}
+
 /* =========================================================
    Hero Section
    ========================================================= */
