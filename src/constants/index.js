@@ -289,33 +289,56 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 export const workExperiences = [
   {
     id: 1,
-    name: "Framer",
-    pos: "Lead Web Developer",
-    duration: "2022 - Present",
+    name: "Konovo pvt ltd",
+    pos: "Full Stack Developer",
+    duration: "July 2024 - Present ",
+    icon: "/assets/konovo.svg",
+    animation: "counting",
     title:
-      "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
-    icon: "/assets/framer.svg",
-    animation: "victory",
+      "Working on full-stack applications with React, Backbone.js, Scala, and Node.js, along with AWS infrastructure and serverless services. I also work on microservices architecture, production debugging, and scalability improvements.",
   },
   {
     id: 2,
-    name: "Figma",
-    pos: "Web Developer",
-    duration: "2020 - 2022",
+    name: "EthanAI",
+    pos: "Full Stack Developer",
+    duration: "August 2024 - July 2025",
+    icon: "/assets/ethanai.svg",
+    animation: "thumbsup",
     title:
-      "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
-    icon: "/assets/figma.svg",
-    animation: "clapping",
+      "Worked on modernizing and migrating legacy applications to Next.js, Django, FastAPI, and PostgreSQL. Handled cloud deployments, 100+ API redesigns, database migrations, and mentored junior developers.",
   },
+
   {
     id: 3,
-    name: "Notion",
-    pos: "Junior Web Developer",
-    duration: "2019 - 2020",
+    name: "Accenflair pvt ltd",
+    pos: "Full Stack Developer",
+    duration: "January 2024 - August 2024",
+    icon: "/assets/accenflairImg.svg",
+    animation: "fistpump",
     title:
-      "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-    icon: "/assets/notion.svg",
-    animation: "salute",
+      "Built and enhanced SaaS applications using React, Node.js, Kafka, GraphQL, gRPC, and Elasticsearch. Worked on payment integrations, notification systems, admin dashboards, and third-party API integrations.",
+  },
+
+  {
+    id: 4,
+    name: "Yenepoya University",
+    pos: "Assistant Professor",
+    duration: "August 2023- November 2023",
+    icon: "/assets/yene.svg",
+    animation: "bow",
+    title:
+      "At Yenepoya, I worked as an Assistant Professor (Grade 1), teaching Computer Science graduates courses on programming, data structures, and problem-solving.",
+  },
+
+  {
+    id: 5,
+    name: "Intel pvt ltd",
+    pos: "Full Stack Developer",
+    duration: "July 2022 - June 2023",
+    icon: "/assets/intel.svg",
+    animation: "thankful",
+    title:
+      "Worked in an 8-member team to build a full-stack dashboard for Intel’s Data Center and AI group using Flask, PostgreSQL, JavaScript, and Bootstrap. Also worked on chip performance benchmarking, data filtering, interactive tables, and visualization using ag-Grid and Highcharts.",
   },
 ];
 

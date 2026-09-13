@@ -7,6 +7,7 @@ import Additonal from "./section/Additonal";
 import Contact from "./section/Contact";
 import { ToastContainer } from "react-toastify";
 import Footer from "./section/Footer";
+import Experience from "./section/Experience";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <About />
+      <Experience />
       <Project />
       <Additonal />
       <Contact />
