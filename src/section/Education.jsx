@@ -1,0 +1,89 @@
+import { Canvas } from "@react-three/fiber";
+import React, { Suspense, useState } from "react";
+import { educations } from "../constants";
+import { OrbitControls } from "@react-three/drei";
+import CanvasLoader from "../components/CanvasLoader";
+import Avatar from "../components/Avatar";
+import Student from "../components/Student";
+
+const Education = () => {
+  const [animationName, setAnimationName] = useState("idleStudent");
+
+  return (
+    <section className="c-space my-20">
+      <div className="w-full text-white-600">
+        <h3 className="head-text font-heading">My Education</h3>
+        <div className="work-container">
+          <div className="work-canvas">
+            <Canvas>
+              <ambientLight intensity={2.5} />
+              <directionalLight position={[5, 10, 5]} intensity={3} />
+
+              <directionalLight position={[-5, 5, 5]} intensity={2} />
+              <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
+              <Suspense fallback={<CanvasLoader />}>
+                <Student
+                  position-y={-3}
+                  scale={3}
+                  animationName={animationName}
+                />
+              </Suspense>
+            </Canvas>
+          </div>
+          <div className="work-content">
+            <div className="sm:py-10 py-5 sm:px-5 px-2.5">
+              {educations.map(
+                ({
+                  id,
+                  college,
+                  location,
+                  duration,
+                  icon,
+                  degree,
+                  animation,
+                }) => (
+                  <div
+                    key={id}
+                    className="work-content_container group"
+                    onClick={() => {
+                      setAnimationName(animation.toLocaleLowerCase());
+                    }}
+                    onPointerOver={() => {
+                      setAnimationName(animation.toLocaleLowerCase());
+                    }}
+                    onPointerOut={() => {
+                      setAnimationName("idleStudent");
+                    }}
+                  >
+                    <div className="flex flex-col h-full justify-start items-center py-2">
+                      <div className="work-content_logo">
+                        <img
+                          src={icon}
+                          alt="work-icon"
+                          className="w-full h-full"
+                        />
+                      </div>
+                      <div className="work-content_bar" />
+                    </div>
+
+                    <div className="sm:p-5 px-25. py-5">
+                      <p className="font-bold text-white-800">{college}</p>
+                      <p className="text-sm mb-5">
+                        {location} --- {duration}
+                      </p>
+                      <p className="group-hover:text-white transition ease-in-out duration-500">
+                        {degree}
+                      </p>
+                    </div>
+                  </div>
+                ),
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Education;

@@ -1,53 +1,24 @@
 import React, { useEffect, useRef } from "react";
 import { useAnimations, useFBX, useGLTF } from "@react-three/drei";
 
-const Avatar = ({ animationName = "idle", ...props }) => {
+const Student = ({ animationName = "idleStudent", ...props }) => {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/models/animations/model.fbx.glb");
+  const { nodes, materials } = useGLTF("/models/animations/model.glb");
 
-  const { animations: idleAnimation } = useFBX(
-    "/models/animations/HappyIdle.fbx",
-  );
+  const { animations: idleAnimation } = useFBX("/models/animations/Idle.fbx");
 
-  const { animations: thankFulAnimation } = useFBX(
-    "/models/animations/Looking.fbx",
-  );
-  const { animations: bowAnimation } = useFBX("/models/animations/Bow.fbx");
-  const { animations: fistPumpAnimation } = useFBX(
-    "/models/animations/FistPump.fbx",
-  );
-  const { animations: thumbsUpAnimation } = useFBX(
-    "/models/animations/ThumbsUp.fbx",
-  );
-  const { animations: countingAnimation } = useFBX(
-    "/models/animations/Counting.fbx",
-  );
   const { animations: rallyingAnimation } = useFBX(
     "/models/animations/Rallying.fbx",
   );
   const { animations: sweatAnimation } = useFBX("/models/animations/Sweat.fbx");
 
-  idleAnimation[0].name = "idle";
+  idleAnimation[0].name = "idleStudent";
 
-  thankFulAnimation[0].name = "thankful";
-  bowAnimation[0].name = "bow";
-  fistPumpAnimation[0].name = "fistpump";
-  thumbsUpAnimation[0].name = "thumbsup";
-  countingAnimation[0].name = "counting";
   rallyingAnimation[0].name = "rallying";
   sweatAnimation[0].name = "sweat";
 
   const { actions } = useAnimations(
-    [
-      idleAnimation[0],
-      countingAnimation[0],
-      thumbsUpAnimation[0],
-      fistPumpAnimation[0],
-      bowAnimation[0],
-      thankFulAnimation[0],
-      rallyingAnimation[0],
-      sweatAnimation[0],
-    ],
+    [idleAnimation[0], rallyingAnimation[0], sweatAnimation[0]],
     group,
   );
 
@@ -130,4 +101,4 @@ const Avatar = ({ animationName = "idle", ...props }) => {
 
 useGLTF.preload("/models/animations/model.fbx.glb");
 
-export default Avatar;
+export default Student;

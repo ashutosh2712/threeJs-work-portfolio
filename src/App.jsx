@@ -8,6 +8,7 @@ import Contact from "./section/Contact";
 import { ToastContainer } from "react-toastify";
 import Footer from "./section/Footer";
 import Experience from "./section/Experience";
+import Education from "./section/Education";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <About />
       <Experience />
       <Project />
+      <Education />
       <Additonal />
       <Contact />
       <Footer />
