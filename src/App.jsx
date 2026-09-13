@@ -4,6 +4,8 @@ import Hero from "./section/Hero";
 import About from "./section/About";
 import Project from "./section/Project";
 import Additonal from "./section/Additonal";
+import Contact from "./section/Contact";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
       <About />
       <Project />
       <Additonal />
+      <Contact />
+      <ToastContainer />
     </main>
   );
 };
