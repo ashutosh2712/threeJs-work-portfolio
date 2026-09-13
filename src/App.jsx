@@ -6,6 +6,7 @@ import Project from "./section/Project";
 import Additonal from "./section/Additonal";
 import Contact from "./section/Contact";
 import { ToastContainer } from "react-toastify";
+import Footer from "./section/Footer";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Project />
       <Additonal />
       <Contact />
+      <Footer />
       <ToastContainer />
     </main>
   );
