@@ -5,7 +5,7 @@ const Student = ({ animationName = "idleStudent", ...props }) => {
   const group = useRef();
   const { nodes, materials } = useGLTF("/models/animations/model.glb");
 
-  const { animations: idleAnimation } = useFBX("/models/animations/Idle.fbx");
+  const { animations: idleAnimation } = useFBX("/models/animations/idle.fbx");
 
   const { animations: rallyingAnimation } = useFBX(
     "/models/animations/Rallying.fbx",
