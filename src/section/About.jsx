@@ -52,7 +52,11 @@ const About = () => {
             <div>
               <p className="grid-headtext font-mono">Hi, I'm Ashutosh</p>
               <p className="grid-subtext font-heading">
-                A passionate web developer
+                I am a passionate Full Stack Developer experienced in building
+                scalable, production-ready applications across frontend,
+                backend, cloud, and microservices. I enjoy solving complex
+                engineering problems, learning new technologies, and turning
+                ideas into reliable products.
               </p>
             </div>
           </div>
@@ -67,10 +71,10 @@ const About = () => {
             <div>
               <p className="grid-headtext font-mono">Tech Stack</p>
               <p className="grid-subtext font-heading">
-                I am a web developer with a passion for creating beautiful and
-                functional websites. I have experience in HTML, CSS, JavaScript,
-                and React. I am always looking to learn new technologies and
-                improve my skills.
+                I work across the full stack, using React, Next.js, TypeScript,
+                JavaScript, Node.js, Scala, and Python, backed by Django,
+                FastAPI, PostgreSQL, and MySQL, with AWS, GCP, Docker, Kafka,
+                GraphQL, gRPC, Elasticsearch, and OpenAI.
               </p>
             </div>
           </div>
@@ -96,13 +100,11 @@ const About = () => {
               />
             </div>
             <div>
-              <p className="grid-headtext font-mono">
-                I work remotely in any timezone
-              </p>
+              <p className="grid-headtext font-mono">Open to work Worldwide</p>
               <p className="grid-subtext font-heading">
-                I am always open to new opportunities and collaborations. If you
-                have a project in mind or just want to say hi, feel free to
-                reach out to me. You can contact me via email.
+                Based in India, but open to remote opportunities across the
+                globe. I’m comfortable collaborating with distributed teams and
+                working across different time zones
               </p>
               <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
             </div>
@@ -118,10 +120,15 @@ const About = () => {
             <div>
               <p className="grid-headtext font-mono">My Journey</p>
               <p className="grid-subtext font-heading">
-                I started my journey as a web developer in 2020. Since then, I
-                have been working on various projects and have gained a lot of
-                experience in the field. I am always looking to learn new
-                technologies and improve my skills.
+                With 4+ years of professional experience, my journey has taken
+                me from building full-stack applications at Intel to working on
+                SaaS platforms, cloud infrastructure, and scalable systems. Over
+                the years, I’ve grown from developing web applications to
+                designing microservices, serverless architectures, APIs, and
+                cloud solutions, working across technologies like React, Python,
+                Scala, Node.js, AWS, GCP, and Docker. Today, I focus on solving
+                complex engineering problems and building scalable, reliable,
+                production-ready systems.
               </p>
             </div>
           </div>
