@@ -22,7 +22,7 @@ const DemoComputer = (props) => {
     <group ref={group} {...props} dispose={null}>
       <group
         rotation={[-Math.PI / 2, 0, 0]}
-        scale={0.0036}
+        scale={0.0032}
         position={[0.3, 1.131, 0.511]}
       >
         <group rotation={[Math.PI / 2, 0, 0]}>

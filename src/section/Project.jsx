@@ -25,14 +25,12 @@ const Project = () => {
     <section className="c-space my-20" id="project">
       <p className="head-text font-heading text-white">My Projects</p>
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
-        <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
-          <div className="absolute top-0 left-0">
-            <img
-              src={currentProject.spotlight}
-              alt="project-1"
-              className="w-full h-96 object-cover rounded-xl"
-            />
-          </div>
+        <div
+          className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(${currentProject.spotlight})`,
+          }}
+        >
           <div
             className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg"
             style={currentProject.logoStyle}
@@ -40,7 +38,7 @@ const Project = () => {
             <img
               src={currentProject.logo}
               alt="project-1-logo"
-              className="w-10 h-10 shadow-sm"
+              className="w-10 h-10 shadow-sm rounded-full object-cover"
             />
           </div>
           <div className="flex flex-col gap-5 text-white-600 my-5">
@@ -61,7 +59,7 @@ const Project = () => {
             <div className="flex  justify-center items-center gap-5">
               <a
                 className="cursor-pointer"
-                href={currentProject.href}
+                href={currentProject.github}
                 target="_blank"
                 rel="noreferrer"
               >
