@@ -14,8 +14,19 @@ export const navLinks = [
     name: "Work",
     href: "#work",
   },
+
   {
     id: 4,
+    name: "Projects",
+    href: "#project",
+  },
+  {
+    id: 5,
+    name: "Academics",
+    href: "#academics",
+  },
+  {
+    id: 6,
     name: "Contact",
     href: "#contact",
   },
@@ -287,7 +298,7 @@ export const workExperiences = [
     id: 4,
     name: "Yenepoya University",
     pos: "Assistant Professor",
-    duration: "August 2023- November 2023",
+    duration: "August 2023 - November 2023",
     icon: "/assets/yene.svg",
     animation: "bow",
     title:
@@ -311,7 +322,7 @@ export const educations = [
     id: 1,
     college: "National Institute of Technology(NIT)",
     location: "Hamirpur(HP), India",
-    duration: "July 2021- July 2023",
+    duration: "July 2021 - July 2023",
     icon: "assets/graduation.svg",
     degree: "Masters of Technology(MTech) in Computer Science and Engineering",
     animation: "rallying",
@@ -320,7 +331,7 @@ export const educations = [
     id: 2,
     college: "Roorkee College of Engineering(RCE)",
     location: "Roorkee(UK), India",
-    duration: "August 2016- September 2020",
+    duration: "August 2016 - September 2020",
     icon: "assets/graduation.svg",
     degree: "Bachelor of Technology(BTech) in Computer Science and Engineering",
     animation: "sweat",

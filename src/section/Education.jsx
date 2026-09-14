@@ -10,7 +10,7 @@ const Education = () => {
   const [animationName, setAnimationName] = useState("idleStudent");
 
   return (
-    <section className="c-space my-20">
+    <section className="c-space my-20" id="academics">
       <div className="w-full text-white-600">
         <h3 className="head-text font-heading">My Education</h3>
         <div className="work-container">
@@ -67,11 +67,13 @@ const Education = () => {
                     </div>
 
                     <div className="sm:p-5 px-25. py-5">
-                      <p className="font-bold text-white-800">{college}</p>
-                      <p className="text-sm mb-5">
+                      <p className="font-bold text-white-800 font-outfit">
+                        {college}
+                      </p>
+                      <p className="text-sm mb-5 font-mono">
                         {location} --- {duration}
                       </p>
-                      <p className="group-hover:text-white transition ease-in-out duration-500">
+                      <p className="group-hover:text-white transition ease-in-out duration-500 font-heading">
                         {degree}
                       </p>
                     </div>

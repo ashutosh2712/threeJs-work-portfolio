@@ -9,7 +9,7 @@ const Experience = () => {
   const [animationName, setAnimationName] = useState("idle");
 
   return (
-    <section className="c-space my-20">
+    <section className="c-space my-20" id="work">
       <div className="w-full text-white-600">
         <h3 className="head-text font-heading">My Work Experience</h3>
         <div className="work-container">
@@ -57,11 +57,13 @@ const Experience = () => {
                     </div>
 
                     <div className="sm:p-5 px-25. py-5">
-                      <p className="font-bold text-white-800">{name}</p>
-                      <p className="text-sm mb-5">
+                      <p className="font-bold text-white-800 font-outfit">
+                        {name}
+                      </p>
+                      <p className="text-sm mb-5 font-mono">
                         {pos} --- {duration}
                       </p>
-                      <p className="group-hover:text-white transition ease-in-out duration-500">
+                      <p className="group-hover:text-white transition ease-in-out duration-500 font-heading">
                         {title}
                       </p>
                     </div>

@@ -41,6 +41,7 @@ const About = () => {
 
   return (
     <section className="c-space my-20" id="about">
+      <h3 className="head-text font-heading text-white mb-5">About Me</h3>
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
@@ -106,7 +107,13 @@ const About = () => {
                 globe. I’m comfortable collaborating with distributed teams and
                 working across different time zones
               </p>
-              <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+              <a href="#contact">
+                <Button
+                  name="Contact Me"
+                  isBeam
+                  containerClass="w-full mt-10"
+                />
+              </a>
             </div>
           </div>
         </div>
